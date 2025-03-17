@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python C2 Server & Client - Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="../css/mobilestyle.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">[Terminal] - Python C2 Server & Client</div>
+        <div class="terminal-content">
+            <pre>
+╔═══════════════════════════════════════════════════════════════╗
+║██████╗ ██╗   ██╗████████╗██╗  ██╗ ██████╗ ███╗   ██╗          ║
+║██╔══██╗╚██╗ ██╔╝╚══██╔══╝██║  ██║██╔═══██╗████╗  ██║          ║
+║██████╔╝ ╚████╔╝    ██║   ███████║██║   ██║██╔██╗ ██║          ║
+║██╔═══╝   ╚██╔╝     ██║   ██╔══██║██║   ██║██║╚██╗██║          ║
+║██║        ██║      ██║   ██║  ██║╚██████╔╝██║ ╚████║          ║
+║╚═╝        ╚═╝      ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝          ║
+║                                                               ║
+║ ██████╗██████╗   ██████╗██╗     ██╗███████╗███╗   ██╗████████╗║
+║██╔════╝╚════██╗ ██╔════╝██║     ██║██╔════╝████╗  ██║╚══██╔══╝║
+║██║      █████╔╝ ██║     ██║     ██║█████╗  ██╔██╗ ██║   ██║   ║
+║██║     ██╔═══╝  ██║     ██║     ██║██╔══╝  ██║╚██╗██║   ██║   ║
+║╚██████╗███████╗ ╚██████╗███████╗██║███████╗██║ ╚████║   ██║   ║
+║ ╚═════╝╚══════╝  ╚═════╝╚══════╝╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ║
+║                                                               ║
+║    ██╗     ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗   ║
+║    ██║     ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗  ║
+║ ████████╗  ███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝  ║
+║ ██╔═██╔═╝  ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗  ║
+║ ██████║    ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║  ║
+║ ╚═════╝    ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝  ║
+╚═══════════════════════════════════════════════════════════════╝
+> A lightweight Command and Control server written in Python to
+  allow remote access, file uploading and downloading, as well
+  as persistence.
+                
+> How features were implemented:
+- Communications are encrypted using the Python library
+  PyCryptodome to implement AES encryption and decryption.
+- I used the Pillow library to take screenshots from the client
+  and upload them to the server.
+- I used Python's winreg library to interact with the Windows
+  registry, I used this to add an entry to the Windows registry
+  under:
+'HKEY_CURRENT_USER/Software/Microsoft/Windows/CurrentVersion/Run'
+  This meant that the script ran automatically during startup
+  without needing any user intervention.
+                
+> Infrastructure:
+- I rented a VPS to offload user traffic, preventing it from
+  overwhelming my home network's bandwidth and ensuring a stable
+  connection.
+- The VPS also acted as a layer of protection, preventing any
+  users from interfering with my personal network.
+                
+> Remote Access Capabilities:
+- The C2 server was capable of running admin-level commands
+  on the client's machine without requiring user intervention.
+- The server was able to monitor what the user was looking at by
+  the C2 being able to take screenshots of the user's computer.
+- The server had a built-in logging system to keep track of
+  the user's actions in User-id.log as well as which commands
+  the server used on the client in C2CMDS.log.
+- I also utilized FTP and AES encryption to upload selected
+  files to the client without requiring user intervention.
+- Similarly, the server could copy files from the client back
+  to the server securely, again without needing client-side
+  intervention.
+                
+Type 'cd ..' to return to the project list.</pre>
+        </div>
+        
+        
+        <div class="input-line">
+            <span class="command">user@portfolio~$</span>
+            <input type="text" id="user-input" class="input" autofocus />
+        </div>
+    </div>
+
+    <script src="../scripts/mobileprojectscript.js"></script>
+</body>
+</html>

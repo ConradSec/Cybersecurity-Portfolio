@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malicious DLL Injection Via Powershell - Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="../css/mobilestyle.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">[Terminal] - Malicious DLL Injection Via Powershell</div>
+        <div class="terminal-content">
+            <pre>
+╔═════════════════════════════════════════════════════════════════════════════════════╗
+║ ███╗   ███╗ █████╗ ██╗     ██╗ ██████╗██╗ ██████╗ ██╗   ██╗███████╗                 ║
+║ ████╗ ████║██╔══██╗██║     ██║██╔════╝██║██╔═══██╗██║   ██║██╔════╝                 ║
+║ ██╔████╔██║███████║██║     ██║██║     ██║██║   ██║██║   ██║███████╗                 ║
+║ ██║╚██╔╝██║██╔══██║██║     ██║██║     ██║██║   ██║██║   ██║╚════██║                 ║
+║ ██║ ╚═╝ ██║██║  ██║███████╗██║╚██████╗██║╚██████╔╝╚██████╔╝███████║                 ║
+║ ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝ ╚═════╝╚═╝ ╚═════╝  ╚═════╝ ╚══════╝                 ║
+║                                                                                     ║
+║ ██████╗ ██╗     ██╗                                                                 ║
+║ ██╔══██╗██║     ██║                                                                 ║
+║ ██║  ██║██║     ██║                                                                 ║
+║ ██║  ██║██║     ██║                                                                 ║
+║ ██████╔╝███████╗███████╗                                                            ║
+║ ╚═════╝ ╚══════╝╚══════╝                                                            ║
+║                                                                                     ║
+║██╗███╗   ██╗     ██╗███████╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗                 ║
+║██║████╗  ██║     ██║██╔════╝██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║                 ║
+║██║██╔██╗ ██║     ██║█████╗  ██║        ██║   ██║██║   ██║██╔██╗ ██║                 ║
+║██║██║╚██╗██║██   ██║██╔══╝  ██║        ██║   ██║██║   ██║██║╚██╗██║                 ║
+║██║██║ ╚████║╚█████╔╝███████╗╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║                 ║
+║╚═╝╚═╝  ╚═══╝ ╚════╝ ╚══════╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝                 ║
+║                                                                                     ║
+║                                                                                     ║
+║ ██████╗  ██████╗ ██╗    ██╗███████╗██████╗ ███████╗██╗  ██╗███████╗██╗     ██╗      ║
+║ ██╔══██╗██╔═══██╗██║    ██║██╔════╝██╔══██╗██╔════╝██║  ██║██╔════╝██║     ██║      ║
+║ ██████╔╝██║   ██║██║ █╗ ██║█████╗  ██████╔╝███████╗███████║█████╗  ██║     ██║      ║
+║ ██╔═══╝ ██║   ██║██║███╗██║██╔══╝  ██╔══██╗╚════██║██╔══██║██╔══╝  ██║     ██║      ║
+║ ██║     ╚██████╔╝╚███╔███╔╝███████╗██║  ██║███████║██║  ██║███████╗███████╗███████╗ ║
+║ ╚═╝      ╚═════╝  ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ║
+╚═════════════════════════════════════════════════════════════════════════════════════╝
+                
+> I wrote a Batch script which would run Powershell commands, these commands
+  would inject a DLL into memory. This would evade static detection as well
+  as executing a payload without the payload needing to be written to disk.
+  
+
+> I used: PowerShell, Windows API, Process Hollowing, and Batch Scripting.
+  
+
+>How did it work?
+- The DLL injection leveraged process hollowing to inject the payload into
+  a benign, non-suspicious Windows process, making detection extremely
+  difficult by bypassing traditional anti-virus tools.
+- A batch file was used to automate the injection, which would then pull a RAT
+  (Remote Access Tool) from an online file hosting service and execute it on the
+  victim machine, ensuring the payload remained fully undetectable (FUD).
+- Persistence was maintained through the injected payload itself, which would
+  run during startup, ensuring continued access even after reboots.
+  
+
+> Testing & Challenges:
+- The primary challenge was ensuring the payload was FUD, as scanning it with
+  any malware detection tool would generate signatures and potentially flag
+  the file. So instead, I tested the payload on multiple Windows virtual machines
+  and virtual private servers to test the likelyhood of detetction.
+  
+
+> Practical Applications & Thoughts:
+- This type of malware injection could be used in targeted attacks, such as
+  compromising corporate systems in industries like insurance, where an attacker
+  could remotely control employees' systems and exfiltrate sensitive data.
+- It provided valuable insights into the dangers of seemingly harmless files,
+  significantly increasing my awareness of the importance of securing systems
+  and myself against such attacks in the future.
+                
+Type 'cd ..' to return to the project list.</pre>
+        </div>
+        
+        
+        <div class="input-line">
+            <span class="command">user@portfolio~$</span>
+            <input type="text" id="user-input" class="input" autofocus />
+        </div>
+    </div>
+
+    <script src="../scripts/mobileprojectscript.js"></script>
+</body>
+</html>

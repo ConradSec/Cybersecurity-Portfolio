@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Bad USB - Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="../css/mobilestyle.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">[Terminal] - Arduino Bad USB</div>
+        <div class="terminal-content">
+            <pre>
+╔═══════════════════════════════════════════════════════════╗
+║   █████╗ ██████╗ ██████╗ ██╗   ██╗██╗███╗   ██╗ ██████╗   ║
+║  ██╔══██╗██╔══██╗██╔══██╗██║   ██║██║████╗  ██║██╔═══██╗  ║
+║  ███████║██████╔╝██║  ██║██║   ██║██║██╔██╗ ██║██║   ██║  ║
+║  ██╔══██║██╔══██╗██║  ██║██║   ██║██║██║╚██╗██║██║   ██║  ║
+║  ██║  ██║██║  ██║██████╔╝╚██████╔╝██║██║ ╚████║╚██████╔╝  ║
+║  ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝   ║
+║                                                           ║
+║  ██████╗  █████╗ ██████╗     ██╗   ██╗███████╗██████╗     ║
+║  ██╔══██╗██╔══██╗██╔══██╗    ██║   ██║██╔════╝██╔══██╗    ║
+║  ██████╔╝███████║██║  ██║    ██║   ██║███████╗██████╔╝    ║
+║  ██╔══██╗██╔══██║██║  ██║    ██║   ██║╚════██║██╔══██╗    ║
+║  ██████╔╝██║  ██║██████╔╝    ╚██████╔╝███████║██████╔╝    ║
+║  ╚═════╝ ╚═╝  ╚═╝╚═════╝      ╚═════╝ ╚══════╝╚═════╝     ║
+╚═══════════════════════════════════════════════════════════╝
+
+> A custom-built BadUSB using an Arduino Micro, designed to
+  emulate a malicious USB device for privilege escalation
+  and payload delivery.
+
+> Hardware Used:
+- Arduino Micro
+- USB Stick (purchased online ~£5)
+- Micro USB to USB adapter
+- Plastic glue
+- Heat gun (for disassembling the USB stick)
+
+> Software Used:
+- Arduino IDE (for programming the Arduino)
+- Custom HID (Human Interface Device) script for payload delivery
+  I also found a compiler online which converts Rubber Ducky
+  payloads, from Hak5 into Arduino code
+- Duckyscript (for custom scripts)
+
+> Features:
+- Emulates a USB keyboard or mouse, enabling automatic payload
+  execution on the target system.
+- Allows the execution of predefined scripts on the target
+  machine, such as opening a terminal and executing commands.
+- Concealed in a regular USB casing for stealthy deployment.
+
+> Result:
+- A fully functional BadUSB that mimics a regular USB stick but
+  can execute commands on any machine it is plugged into,
+  effectively allowing remote control through the use of
+  reverse shells or privilege escalation.
+
+> My Thoughts:
+- I really enjoyed this project as it allowed me to experiment
+  with software as well as modifying hardware.
+
+- The process of hiding the Arduino inside the USB was a bit
+  challenging because of the space limitations. I'm sure if I
+  revisit this in the future, I will add other features such as
+  a slot for a micro SD card so I can copy files from the target
+  computer to the micro SD card.
+
+- This project shows the potential risks of Bad-USB attacks,
+  and how important it is for individuals to practice good
+  cybersecurity habits such as locking their computer when they
+  aren't currently in use.
+
+Type 'cd ..' to return to the project list.</pre>
+        </div>
+        
+        
+        <div class="input-line">
+            <span class="command">user@portfolio~$</span>
+            <input type="text" id="user-input" class="input" autofocus />
+        </div>
+    </div>
+
+    <script src="../scripts/mobileprojectscript.js"></script>
+</body>
+</html>

