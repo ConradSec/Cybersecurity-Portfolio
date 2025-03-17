@@ -17,6 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.location.href = "mobile-project3.html"; // go to project 3
             } else if (userInput === "2.4") {
                 window.location.href = "mobile-project4.html"; // go to project 4
+            } else if (userInput === "2.5") {
+                window.location.href = "mobile-project5.html";
+            } else if (userInput === "2.6") {
+                window.location.href = "mobile-project6.html";
             } else if (userInput === "3") {
                 window.location.href = "mobile-skills.html";  // Go to Skills
             } else if (userInput === "4") {

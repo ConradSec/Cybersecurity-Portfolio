@@ -4,32 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arduino Bad USB - Cybersecurity Portfolio</title>
-    <link rel="stylesheet" href="../css/mobilestyle.css">
+    <link rel="stylesheet" href="./../css/mobilestyle.css">
 </head>
 <body>
     <div class="terminal">
         <div class="terminal-header">[Terminal] - Arduino Bad USB</div>
         <div class="terminal-content">
             <pre>
-╔═══════════════════════════════════════════════════════════╗
-║   █████╗ ██████╗ ██████╗ ██╗   ██╗██╗███╗   ██╗ ██████╗   ║
-║  ██╔══██╗██╔══██╗██╔══██╗██║   ██║██║████╗  ██║██╔═══██╗  ║
-║  ███████║██████╔╝██║  ██║██║   ██║██║██╔██╗ ██║██║   ██║  ║
-║  ██╔══██║██╔══██╗██║  ██║██║   ██║██║██║╚██╗██║██║   ██║  ║
-║  ██║  ██║██║  ██║██████╔╝╚██████╔╝██║██║ ╚████║╚██████╔╝  ║
-║  ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝   ║
-║                                                           ║
-║  ██████╗  █████╗ ██████╗     ██╗   ██╗███████╗██████╗     ║
-║  ██╔══██╗██╔══██╗██╔══██╗    ██║   ██║██╔════╝██╔══██╗    ║
-║  ██████╔╝███████║██║  ██║    ██║   ██║███████╗██████╔╝    ║
-║  ██╔══██╗██╔══██║██║  ██║    ██║   ██║╚════██║██╔══██╗    ║
-║  ██████╔╝██║  ██║██████╔╝    ╚██████╔╝███████║██████╔╝    ║
-║  ╚═════╝ ╚═╝  ╚═╝╚═════╝      ╚═════╝ ╚══════╝╚═════╝     ║
-╚═══════════════════════════════════════════════════════════╝
+                 _       _             
+                | |     (_)            
+    __ _ _ __ __| |_   _ _ _ __   ___  
+   / _` | '__/ _` | | | | | '_ \ / _ \ 
+  | (_| | | | (_| | |_| | | | | | (_) |
+   \__,_|_|  \__,_|\__,_|_|_| |_|\___/ 
+  | |             | |           | |    
+  | |__   __ _  __| |  _   _ ___| |__  
+  | '_ \ / _` |/ _` | | | | / __| '_ \ 
+  | |_) | (_| | (_| | | |_| \__ \ |_) |
+  |_.__/ \__,_|\__,_|  \__,_|___/_.__/ 
+                                     
+                                     
 
-> A custom-built BadUSB using an Arduino Micro, designed to
-  emulate a malicious USB device for privilege escalation
-  and payload delivery.
+> A custom-built BadUSB using an Arduino Micro,
+  designed to emulate a malicious USB device
+  for privilege escalation and payload delivery.
 
 > Hardware Used:
 - Arduino Micro
@@ -40,37 +38,47 @@
 
 > Software Used:
 - Arduino IDE (for programming the Arduino)
-- Custom HID (Human Interface Device) script for payload delivery
-  I also found a compiler online which converts Rubber Ducky
-  payloads, from Hak5 into Arduino code
+- Custom HID script for payload delivery
+  I also found a compiler online which converts
+  Rubber Ducky payloads, from Hak5 into
+  Arduino code
 - Duckyscript (for custom scripts)
 
 > Features:
-- Emulates a USB keyboard or mouse, enabling automatic payload
-  execution on the target system.
-- Allows the execution of predefined scripts on the target
-  machine, such as opening a terminal and executing commands.
-- Concealed in a regular USB casing for stealthy deployment.
+- Emulates a USB keyboard or mouse, enabling
+  automatic payload execution on the
+  target system.
+- Allows the execution of predefined scripts
+  on the target machine, such as opening a
+  terminal and executing commands.
+- Concealed in a regular USB casing for
+  stealthy deployment.
 
 > Result:
-- A fully functional BadUSB that mimics a regular USB stick but
-  can execute commands on any machine it is plugged into,
-  effectively allowing remote control through the use of
-  reverse shells or privilege escalation.
+- A fully functional BadUSB that mimics a
+  regular USB stick but can execute commands
+  on any machine it is plugged into,
+  effectively allowing remote control through
+  the use of reverse shells or privilege
+  escalation.
 
 > My Thoughts:
-- I really enjoyed this project as it allowed me to experiment
-  with software as well as modifying hardware.
+- I really enjoyed this project as it allowed me
+  to experiment with software as well as
+  modifying hardware.
 
-- The process of hiding the Arduino inside the USB was a bit
-  challenging because of the space limitations. I'm sure if I
-  revisit this in the future, I will add other features such as
-  a slot for a micro SD card so I can copy files from the target
-  computer to the micro SD card.
+- The process of hiding the Arduino inside
+  the USB was a bit challenging because of the
+  space limitations. I'm sure if I revisit this
+  in the future, I will add other features such
+  as a slot for a micro SD card so I can copy
+  files from the target computer to the
+  micro SD card.
 
-- This project shows the potential risks of Bad-USB attacks,
-  and how important it is for individuals to practice good
-  cybersecurity habits such as locking their computer when they
+- This project shows the potential risks of
+  Bad-USB attacks, and how important it is
+  for individuals to practice good cybersecurity
+  habits such as locking their computer when they
   aren't currently in use.
 
 Type 'cd ..' to return to the project list.</pre>
@@ -83,6 +91,6 @@ Type 'cd ..' to return to the project list.</pre>
         </div>
     </div>
 
-    <script src="../scripts/mobileprojectscript.js"></script>
+    <script src="./../scripts/mobileprojectscript.js"></script>
 </body>
 </html>
