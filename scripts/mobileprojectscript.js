@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (userInput === "5") {
                 window.location.href = "mobile-contact.html";  // Go to Contact Info
             } else if (userInput === "cd ..") {
-                window.location.href = "    mobile-projects.html";  //go back to the project list
+                window.location.href = "mobile-projects.html";  //go back to the project list
             } else {
                 alert("Please enter a number listed above: " + userInput); 
             }
