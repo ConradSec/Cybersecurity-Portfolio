@@ -62,11 +62,15 @@ body {
     align-items: center;
     background-color: black;
     padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .command {
     color: lightgreen;
     margin-right: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .input {

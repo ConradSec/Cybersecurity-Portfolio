@@ -70,11 +70,15 @@ body {
     background-color: black;
     padding: 8px;
     font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .command {
     color: lightgreen;
     margin-right: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .input {

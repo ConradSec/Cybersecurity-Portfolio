@@ -47,11 +47,15 @@
             align-items: center;
             background-color: black;
             padding: 10px;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         .command {
             color: lightgreen;
             margin-right: 10px;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .input {
@@ -98,7 +102,7 @@ Type a number listed above and press Enter:</pre></div>
         
         
         <div class="input-line">
-            <span class="command">user@portfolio~$</span>
+            <span class="command">root@conradscott:~/home$</span>
             <input type="text" id="user-input" class="input" autofocus />
         </div>
     </div>
