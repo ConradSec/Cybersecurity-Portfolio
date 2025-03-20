@@ -9,12 +9,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden;
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 6px; /* Slim scrollbar for mobile */
+    width: 6px; 
 }
 
 ::-webkit-scrollbar-track {
@@ -31,11 +30,10 @@ body {
     background-color: #00cc00;
 }
 
-/* Terminal Styling */
 .terminal {
-    width: 90vw; /* Make it take most of the screen width */
-    height: 85vh; /* Use most of the screen height */
-    max-width: 500px; /* Prevent it from becoming too wide */
+    width: 90vw;
+    height: 85vh;
+    max-width: 500px; 
     background-color: black;
     border: 3px solid #00FF00;
     border-radius: 10px;
@@ -53,17 +51,15 @@ body {
     text-align: left;
 }
 
-/* Content inside the terminal */
 .terminal-content {
     flex: 1;
     overflow-y: auto;
     padding: 12px;
     font-size: 14px;
     line-height: 1.4;
-    max-height: 70vh; /* Ensure it fits well */
+    max-height: 70vh;
 }
 
-/* Input line at the bottom */
 .input-line {
     display: flex;
     align-items: center;
@@ -91,12 +87,11 @@ body {
     width: 100%;
 }
 
-/* Responsive tweaks */
 @media (max-width: 600px) {
     .terminal {
-        width: 95vw; /* Use almost all screen width */
-        height: 90vh; /* Use more height */
-        max-width: none; /* Allow it to adapt fully */
+        width: 95vw; 
+        height: 90vh; 
+        max-width: none;
     }
 
     .terminal-content {

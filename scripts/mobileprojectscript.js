@@ -6,33 +6,35 @@ document.addEventListener("DOMContentLoaded", function () {
             const userInput = inputElement.value.trim();
 
             if (userInput === "1") {
-                window.location.href = "mobile-about.html";  // Go to About Me
+                window.location.href = "mobile-about.html";
             } else if (userInput === "2") {
-                window.location.href = "mobile-projects.html";  // Go to Projects
+                window.location.href = "mobile-projects.html"; 
             } else if (userInput === "2.1") {
-                window.location.href = "mobile-project1.html";  // go to project 1
+                window.location.href = "mobile-project1.html";
             } else if (userInput === "2.2") {
-                window.location.href = "mobile-project2.html"; // go to project 2
+                window.location.href = "mobile-project2.html";
             } else if (userInput === "2.3") {
-                window.location.href = "mobile-project3.html"; // go to project 3
+                window.location.href = "mobile-project3.html";
             } else if (userInput === "2.4") {
-                window.location.href = "mobile-project4.html"; // go to project 4
+                window.location.href = "mobile-project4.html";
             } else if (userInput === "2.5") {
                 window.location.href = "mobile-project5.html";
             } else if (userInput === "2.6") {
                 window.location.href = "mobile-project6.html";
             } else if (userInput === "3") {
-                window.location.href = "mobile-skills.html";  // Go to Skills
+                window.location.href = "mobile-skills.html";
             } else if (userInput === "4") {
-                window.location.href = "mobile-goals.html";  // Go to Goals
+                window.location.href = "mobile-goals.html";
             } else if (userInput === "5") {
-                window.location.href = "mobile-contact.html";  // Go to Contact Info
+                window.location.href = "mobile-contact.html";
             } else if (userInput === "cd ..") {
-                window.location.href = "mobile-projects.html";  //go back to the project list
+                window.location.href = "mobile-projects.html";
             } else if (userInput === "Cd ..") {
                 window.location.href = "mobile-projects.html";
             } else if (userInput === "CD ..") {
                 window.location.href = "mobile-projects.html";
+            } else if (userInput === "cD ..") {
+                window.location.href = "mobile-index.html";
             } else {
                 alert("Please enter a number listed above: " + userInput); 
             }

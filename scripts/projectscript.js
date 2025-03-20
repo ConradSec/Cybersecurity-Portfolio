@@ -28,7 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (userInput === "5") {
                 window.location.href = "contact.html";
             } else if (userInput === "cd .." || userInput == "cd ~") {
-                window.location.href = "projects.html";  //go back to the homepage
+                window.location.href = "projects.html"; 
+            } else if (userInput === "CD ..") {
+                window.location.href = "projects.html";
+            } else if (userInput === "cD ..") {
+                window.location.href = "projects.html";
             } else {
                 alert("Please enter a number listed above: " + userInput); 
             }

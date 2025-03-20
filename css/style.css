@@ -11,23 +11,22 @@ body {
     flex-direction: column;
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
+    width: 10px; 
 }
 
 ::-webkit-scrollbar-track {
-    background: black; /* Track background color */
+    background: black; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #00FF00; /* Scrollbar thumb color */
+    background-color: #00FF00;
     border-radius: 5px;
-    border: 3px solid black; /* Border around the thumb */
+    border: 3px solid black; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #00cc00; /* Thumb color when hovering */
+    background-color: #00cc00; 
 }
 
 .terminal {
