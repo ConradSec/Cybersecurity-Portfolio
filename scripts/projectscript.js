@@ -7,6 +7,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (userInput === "1") {
                 window.location.href = "about.html";
+            } else if (userInput === "cd 1") {
+                window.location.href = "about.html";
+            } else if (userInput === "cd 2") {
+                window.location.href = "projects.html";
+            } else if (userInput === "cd 2.1") {
+                window.location.href = "project1.html";
+            } else if (userInput === "cd 2.2") {
+                window.location.href = "project2.html";
+            } else if (userInput === "cd 2.3") {
+                window.location.href = "project3.html";
+            } else if (userInput === "cd 2.4") {
+                window.location.href = "project4.html";
+            } else if (userInput === "cd 2.5") {
+                window.location.href = "project5.html";
+            } else if (userInput === "cd 2.6") {
+                window.location.href = "project6.html";
+            } else if (userInput === "cd 3") {
+                window.location.href = "skills.html";
+            } else if (userInput === "cd 4") {
+                window.location.href = "goals.html";
+            } else if (userInput === "cd 5") {
+                window.location.href = "contact.html";
             } else if (userInput === "2") {
                 window.location.href = "projects.html";
             } else if (userInput === "2.1") {

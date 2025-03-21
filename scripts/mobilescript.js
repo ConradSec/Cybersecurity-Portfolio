@@ -7,6 +7,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (userInput === "1") {
                 window.location.href = "mobile-about.html";
+            } else if (userInput === "cd 1") {
+                window.location.href = "mobile-about.html";
+            } else if (userInput === "cd 2") {
+                window.location.href = "mobile-projects.html";
+            } else if (userInput === "cd 2.1") {
+                window.location.href = "mobile-project1.html";
+            } else if (userInput === "cd 2.2") {
+                window.location.href = "mobile-project2.html";
+            } else if (userInput === "cd 2.3") {
+                window.location.href = "mobile-project3.html";
+            } else if (userInput === "cd 2.4") {
+                window.location.href = "mobile-project4.html";
+            } else if (userInput === "cd 2.5") {
+                window.location.href = "mobile-project5.html";
+            } else if (userInput === "cd 2.6") {
+                window.location.href = "mobile-project6.html";
+            } else if (userInput === "cd 3") {
+                window.location.href = "mobile-skills.html";
+            } else if (userInput === "cd 4") {
+                window.location.href = "mobile-goals.html";
+            } else if (userInput === "cd 5") {
+                window.location.href = "mobile-contact.html";
             } else if (userInput === "2") {
                 window.location.href = "mobile-projects.html";  
             } else if (userInput === "2.1") {
