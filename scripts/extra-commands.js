@@ -11,30 +11,27 @@ inputElement.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         let command = inputElement.value.trim();
         if (command) {
-            // Save command to history and reset the index pointer.
             commandHistory.push(command);
             historyIndex = commandHistory.length;
             handleCommand(command);
             inputElement.value = "";
         }
     } else if (event.key === "ArrowUp") {
-        // Move back through history
         if (commandHistory.length > 0) {
             historyIndex = Math.max(historyIndex - 1, 0);
             inputElement.value = commandHistory[historyIndex];
         }
-        event.preventDefault(); // prevent caret movement
+        event.preventDefault();
     } else if (event.key === "ArrowDown") {
-        // Move forward through history
         if (commandHistory.length > 0) {
             historyIndex = Math.min(historyIndex + 1, commandHistory.length);
             if (historyIndex === commandHistory.length) {
-                inputElement.value = ""; // Clear if at most recent
+                inputElement.value = "";
             } else {
                 inputElement.value = commandHistory[historyIndex];
             }
         }
-        event.preventDefault(); // prevent caret movement
+        event.preventDefault();
     }
 });
 
@@ -120,7 +117,7 @@ Available commands:
   open <file>    - Open any file
   run <program>  - Run a program
   ping <host>    - Ping a host
-  clear, cls    - Clear the screen
+  clear, cls     - Clear the screen
   whoami         - Display your hacker alias
   uptime         - Check system uptime
   --help, help   - Display this help message
@@ -228,11 +225,9 @@ Available commands:
         let dir = getDirectory(currentDirectory);
         let files = Object.keys(dir);
         let formattedFiles = files.map((file, index) => {
-            // Add two spaces between each file/directory
             return file + "  ";
         });
-    
-        // Join the files with a space
+
         return formattedFiles.join("");
     }
     
