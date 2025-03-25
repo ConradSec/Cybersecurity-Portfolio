@@ -59,11 +59,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.location.href = "index.html";
             } else if (userInput === "cD ..") {
                 window.location.href = "index.html";
+            } else if (userInput === "cd") {
+                window.location.href = "index.html";
+            } else if (userInput === "Cd") {
+                window.location.href = "index.html";
+            }
             } else {
                 alert("Please enter a number listed above: " + userInput);
             }
 
             inputElement.value = "";
         }
-    });
+    );
 });

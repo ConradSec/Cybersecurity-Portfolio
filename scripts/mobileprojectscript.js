@@ -57,6 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.location.href = "mobile-projects.html";
             } else if (userInput === "cD ..") {
                 window.location.href = "mobile-index.html";
+            } else if (userInput === "cd") {
+                window.location.href = "mobile-index.html";
+            } else if (userInput === "Cd") {
+                window.location.href = "mobile- index.html";
             } else {
                 alert("Please enter a number listed above: " + userInput); 
             }
