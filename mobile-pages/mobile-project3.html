@@ -7,30 +7,12 @@
     <link rel="stylesheet" href="./../css/mobilestyle.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body onclick="document.getElementById('user-input').focus()">
     <div class="terminal">
         <div class="terminal-header">[Terminal] - Python C2 Server & Client</div>
         <div class="terminal-content">
             <pre>
-              _   _                    
-             | | | |                   
-  _ __  _   _| |_| |__   ___  _ __     
- | '_ \| | | | __| '_ \ / _ \| '_ \    
- | |_) | |_| | |_| | | | (_) | | | |   
- | .__/ \__, |\__|_| |_|\___/|_| |_|   
- | |     __/ |                         
- |_|   _|___/      _ _            _    
-      |__ \       | (_)          | |   
-   ___   ) |   ___| |_  ___ _ __ | |_  
-  / __| / /   / __| | |/ _ \ '_ \| __| 
- | (__ / /_  | (__| | |  __/ | | | |_  
-  \___|____|  \___|_|_|\___|_| |_|\__|  
-    _       ___  ___ _ ____   _____ _ __ 
-  _| |_    / __|/ _ \ '__\ \ / / _ \ '__|
- |_   _|   \__ \  __/ |   \ V /  __/ |   
-   |_|     |___/\___|_|    \_/ \___|_|   
-                                       
-                                       
+            <img src="c2server.png" class="project3">                
 > A lightweight Command and Control server
   written in Python to allow remote access,
   file uploading and downloading, as well
@@ -86,11 +68,14 @@
         
         
         <div class="input-line">
-            <span class="command">root@conradscott:~/projects/python_c2_server$</span>
+          <pre class="root">root</pre><pre class="atsymbol">@</pre><pre class="ip">185.199.111.1</pre><pre class="inputcolon">:/</pre><pre class="dollar">c2_server$</pre>
             <input type="text" id="user-input" class="input" autofocus />
         </div>
     </div>
 
     <script src="./../scripts/mobileprojectscript.js"></script>
+    <div class="scroll-indicator">
+      ↓ Scroll down ↓
+  </div>
 </body>
 </html>

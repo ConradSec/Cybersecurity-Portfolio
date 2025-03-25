@@ -7,27 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body onclick="document.getElementById('user-input').focus()">
     <div class="terminal">
         <div class="terminal-header">[Terminal] - Malicious DLL Injection Via Powershell</div>
         <div class="terminal-content">
             <pre>
-╔════════════════════════════════════════════════════════════════════════╗
-║  ██████╗ ██╗     ██╗                                                   ║
-║  ██╔══██╗██║     ██║                                                   ║
-║  ██║  ██║██║     ██║                                                   ║
-║  ██║  ██║██║     ██║                                                   ║
-║  ██████╔╝███████╗███████╗                                              ║
-║  ╚═════╝ ╚══════╝╚══════╝                                              ║
-║                                                                        ║
-║  ██╗███╗   ██╗     ██╗███████╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗  ║
-║  ██║████╗  ██║     ██║██╔════╝██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║  ║
-║  ██║██╔██╗ ██║     ██║█████╗  ██║        ██║   ██║██║   ██║██╔██╗ ██║  ║
-║  ██║██║╚██╗██║██   ██║██╔══╝  ██║        ██║   ██║██║   ██║██║╚██╗██║  ║
-║  ██║██║ ╚████║╚█████╔╝███████╗╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║  ║
-║  ╚═╝╚═╝  ╚═══╝ ╚════╝ ╚══════╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝  ║                                                              
-╚════════════════════════════════════════════════════════════════════════╝
-                
+              <img src="dllinjection.png" class="project4">   
 > I wrote a Batch script which would run Powershell commands, these commands
   would inject a DLL into memory. This would evade static detection as well
   as executing a payload without the payload needing to be written to disk.
@@ -68,11 +53,14 @@
         
         
         <div class="input-line">
-            <span class="command">root@conradscott:~/projects/dll_injection$</span>
+          <pre class="root">root</pre><pre class="atsymbol">@</pre><pre class="ip">185.199.111.1</pre><pre class="inputcolon">:/</pre><pre class="dollar">dll_injection$</pre>
             <input type="text" id="user-input" class="input" autofocus />
         </div>
     </div>
 
     <script src="scripts/projectscript.js"></script>
+    <div class="scroll-indicator">
+      ↓ Scroll down ↓
+  </div>
 </body>
 </html>

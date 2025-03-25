@@ -7,32 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body onclick="document.getElementById('user-input').focus()">
     <div class="terminal">
         <div class="terminal-header">[Terminal] - RCE via MouseJack Vulnerability</div>
         <div class="terminal-content">
             <pre>
-╔══════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║ ██████╗  ██████╗███████╗    ██╗   ██╗██╗ █████╗                                                      ║
-║ ██╔══██╗██╔════╝██╔════╝    ██║   ██║██║██╔══██╗                                                     ║
-║ ██████╔╝██║     █████╗      ██║   ██║██║███████║                                                     ║
-║ ██╔══██╗██║     ██╔══╝      ╚██╗ ██╔╝██║██╔══██║                                                     ║
-║ ██║  ██║╚██████╗███████╗     ╚████╔╝ ██║██║  ██║                                                     ║
-║ ╚═╝  ╚═╝ ╚═════╝╚══════╝      ╚═══╝  ╚═╝╚═╝  ╚═╝                                                     ║
-║ ███╗   ███╗ ██████╗ ██╗   ██╗███████╗███████╗     ██╗ █████╗  ██████╗██╗  ██╗                        ║
-║ ████╗ ████║██╔═══██╗██║   ██║██╔════╝██╔════╝     ██║██╔══██╗██╔════╝██║ ██╔╝                        ║
-║ ██╔████╔██║██║   ██║██║   ██║███████╗█████╗       ██║███████║██║     █████╔╝                         ║
-║ ██║╚██╔╝██║██║   ██║██║   ██║╚════██║██╔══╝  ██   ██║██╔══██║██║     ██╔═██╗                         ║
-║ ██║ ╚═╝ ██║╚██████╔╝╚██████╔╝███████║███████╗╚█████╔╝██║  ██║╚██████╗██║  ██╗                        ║
-║ ╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝ ╚════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝                        ║
-║ ██╗   ██╗██╗   ██╗██╗     ███╗   ██╗███████╗██████╗  █████╗ ██████╗ ██╗██╗     ██╗████████╗██╗   ██╗ ║
-║ ██║   ██║██║   ██║██║     ████╗  ██║██╔════╝██╔══██╗██╔══██╗██╔══██╗██║██║     ██║╚══██╔══╝╚██╗ ██╔╝ ║
-║ ██║   ██║██║   ██║██║     ██╔██╗ ██║█████╗  ██████╔╝███████║██████╔╝██║██║     ██║   ██║    ╚████╔╝  ║
-║ ╚██╗ ██╔╝██║   ██║██║     ██║╚██╗██║██╔══╝  ██╔══██╗██╔══██║██╔══██╗██║██║     ██║   ██║     ╚██╔╝   ║
-║  ╚████╔╝ ╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║  ██║██████╔╝██║███████╗██║   ██║      ██║    ║
-║   ╚═══╝   ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚══════╝╚═╝   ╚═╝      ╚═╝    ║
-╚══════════════════════════════════════════════════════════════════════════════════════════════════════╝
-
+              <img src="mousejackrce.png" class="project5">   
 > I exploited a widespread vulnerability found in the chips of wireless HID devices.
   This allows an attacker to remotely inject keystrokes into a target machine by
   hijacking unencrypted signals from wireless mice and keyboards, and sending out 
@@ -87,11 +67,14 @@
 
 
         <div class="input-line">
-            <span class="command">root@conradscott:~/projects/rce_via_mousejack$</span>
+          <pre class="root">root</pre><pre class="atsymbol">@</pre><pre class="ip">185.199.111.1</pre><pre class="inputcolon">:/</pre><pre class="dollar">mousejack_rce$</pre>
             <input type="text" id="user-input" class="input" autofocus />
         </div>
     </div>
 
     <script src="scripts/projectscript.js"></script>
+    <div class="scroll-indicator">
+      ↓ Scroll down ↓
+  </div>
 </body>
 </html>

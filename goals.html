@@ -7,20 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body onclick="document.getElementById('user-input').focus()">
     <div class="terminal">
         <div class="terminal-header">[Terminal] - Goals</div>
         <div class="terminal-content">
             <pre>
-  ╔═══════════════════════════════════════════════╗
-  ║   ██████╗  ██████╗  █████╗ ██╗     ███████╗   ║
-  ║  ██╔════╝ ██╔═══██╗██╔══██╗██║     ██╔════╝   ║
-  ║  ██║  ███╗██║   ██║███████║██║     ███████╗   ║
-  ║  ██║   ██║██║   ██║██╔══██║██║     ╚════██║   ║
-  ║  ╚██████╔╝╚██████╔╝██║  ██║███████╗███████║   ║
-  ║   ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝   ║
-  ╚═══════════════════════════════════════════════╝
-
+<img src="goals.png" class="goals">
 > Penetration Testing Certifications (HTB CPTS):
   - I'm currently working towards the Hack The Box Pentester certification,
     which has had its challenges but has been highly rewarding.
@@ -65,12 +57,15 @@
             <p>Type cd .. to return to Home.</p>
         </div>
         <div class="input-line">
-            <span class="command">root@conradscott:~/goals$</span>
+          <pre class="root">root</pre><pre class="atsymbol">@</pre><pre class="ip">185.199.111.1</pre><pre class="inputcolon">:/</pre><pre class="dollar">goals$</pre>
             <input type="text" id="user-input" class="input" autofocus />
         </div>
     </div>
     </div>
 
     <script src="scripts/script.js"></script>
+    <div class="scroll-indicator">
+      ↓ Scroll down ↓
+  </div>
 </body>
 </html>

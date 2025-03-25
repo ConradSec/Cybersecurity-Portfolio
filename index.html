@@ -8,39 +8,24 @@
     <script src="scripts/mobile.js"></script>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body onclick="document.getElementById('user-input').focus()">
     <div class="terminal">
         <div class="terminal-header">[Terminal] - Cybersecurity Portfolio</div>
         <div class="terminal-content">
             <pre>
-███████╗ ██████╗ ███╗   ██╗██████╗  █████╗ ██████╗ 
-██╔════╝██╔═══██╗████╗  ██║██╔══██╗██╔══██╗██╔══██╗
-██║     ██║   ██║██╔██╗ ██║██████╔╝███████║██║  ██║
-██║     ██║   ██║██║╚██╗██║██╔══██╗██╔══██║██║  ██║
-██████╗ ╚██████╔╝██║ ╚████║██║  ██║██║  ██║██████╔╝
-╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ 
+<img src="indexlogo.png" class="conradscott">
+Type a number listed below and press Enter.
+Alternatively, click on the option you want to select:
 
-███████╗ ██████╗ ██████╗ ████████╗████████╗        
-██╔════╝██╔════╝██╔═══██╗╚══██╔══╝╚══██╔══╝        
-███████╗██║     ██║   ██║   ██║      ██║           
-╚════██║██║     ██║   ██║   ██║      ██║           
-███████║╚██████╗╚██████╔╝   ██║      ██║           
-╚══════╝ ╚═════╝ ╚═════╝    ╚═╝      ╚═╝           
-                
-Welcome to my portfolio.
-Type a number listed below and press Enter:
-
-[1] About Me
-[2] Projects
-[3] Skills
-[4] Goals
-[5] Contact
-[6] Extra stuff
-</pre></div>
-        
+<a href="about.html" style="color: #00FF00; text-decoration: none;">[1] About Me</a>
+<a href="projects.html" style="color: #00FF00; text-decoration: none;">[2] Projects</a>
+<a href="skills.html" style="color: #00FF00; text-decoration: none;">[3] Skills</a>
+<a href="goals.html" style="color: #00FF00; text-decoration: none;">[4] Goals</a>
+<a href="contact.html" style="color: #00FF00; text-decoration: none;">[5] Contact</a></pre>
+        </div>
         
         <div class="input-line">
-            <span class="command">root@conradscott:~/home$</span>
+            <pre class="root">root</pre><pre class="atsymbol">@</pre><pre class="ip">185.199.111.1</pre><pre class="inputcolon">:/</pre><pre class="dollar">$</pre>
             <input type="text" id="user-input" class="input" autofocus />
         </div>
     </div>

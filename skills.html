@@ -7,20 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body onclick="document.getElementById('user-input').focus()">
     <div class="terminal">
         <div class="terminal-header">[Terminal] - Skills</div>
         <div class="terminal-content">
             <pre>
-  ╔═══════════════════════════════════════════════╗
-  ║  ███████╗██╗  ██╗██╗██╗     ██╗     ███████╗  ║
-  ║  ██╔════╝██║ ██╔╝██║██║     ██║     ██╔════╝  ║
-  ║  ███████╗█████╔╝ ██║██║     ██║     ███████╗  ║
-  ║  ╚════██║██╔═██╗ ██║██║     ██║     ╚════██║  ║
-  ║  ███████║██║  ██╗██║███████╗███████╗███████║  ║
-  ║  ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝  ║                                     
-  ╚═══════════════════════════════════════════════╝
-    
+              <img src="skills.png" class="skills" style="max-width: 50%; max-height: 50%;">   
 Network Penetration Testing:
 > Experience:  
   - I've spent many hours on Hack The Box, focusing primarily on network penetration
@@ -80,11 +72,14 @@ Network Penetration Testing:
         </div>
         
         <div class="input-line">
-            <span class="command">root@conradscott:~/skills$</span>
+          <pre class="root">root</pre><pre class="atsymbol">@</pre><pre class="ip">185.199.111.1</pre><pre class="inputcolon">:/</pre><pre class="dollar">skills$</pre>
             <input type="text" id="user-input" class="input" autofocus />
         </div>
     </div>
 
     <script src="scripts/script.js"></script>
+    <div class="scroll-indicator">
+      ↓ Scroll down ↓
+  </div>
 </body>
 </html>

@@ -7,19 +7,12 @@
     <link rel="stylesheet" href="./../css/mobilestyle.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body onclick="document.getElementById('user-input').focus()">
     <div class="terminal">
         <div class="terminal-header">[Terminal] - About Me</div>
         <div class="terminal-content">
             <pre>
-           _                 _      __  __      
-     /\   | |               | |    |  \/  |     
-    /  \  | |__   ___  _   _| |_   | \  / | ___ 
-   / /\ \ | '_ \ / _ \| | | | __|  | |\/| |/ _ \
-  / ____ \| |_) | (_) | |_| | |_   | |  | |  __/
- /_/    \_\_.__/ \___/ \__,_|\__|  |_|  |_|\___|
-
-             
+<img src="mobileaboutme.png" class="mobileaboutmelogo">
 > Name: Conrad Scott  
 > Cybersecurity Enthusiast, Pentester 
   and Offensive Security Researcher
@@ -84,11 +77,14 @@ Fun facts:
 
         
         <div class="input-line">
-            <span class="command">root@conradscott:~/whoami$</span>
+          <pre class="root">root</pre><pre class="atsymbol">@</pre><pre class="ip">185.199.111.1</pre><pre class="inputcolon">:/</pre><pre class="dollar">whoami$</pre>
             <input type="text" id="user-input" class="input" autofocus />
         </div>
     </div>
 
     <script src="./../scripts/mobilescript.js"></script>
+    <div class="scroll-indicator">
+      ↓ Scroll down ↓
+  </div>
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conrad Scott - Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/mobile.js"></script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="terminal">
+        <!-- Header Section -->
+        <header class="terminal-header">
+            <h1>[Terminal] - Cybersecurity Portfolio</h1>
+        </header>
+
+        <!-- Main Content -->
+        <div class="terminal-content">
+            <section class="welcome-message">
+                <h2>Welcome to my portfolio</h2>
+                <p>Type a number listed below and press Enter:</p>
+            </section>
+
+            <!-- Menu for Navigation -->
+            <section class="menu">
+                <ul>
+                    <li><a href="about-me.html">[1] About Me</a></li>
+                    <li><a href="projects.html">[2] Projects</a></li>
+                    <li><a href="skills.html">[3] Skills</a></li>
+                    <li><a href="goals.html">[4] Goals</a></li>
+                    <li><a href="contact.html">[5] Contact</a></li>
+                    <li><a href="extra.html">[6] Extra Stuff</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Input Line -->
+        <div class="input-line">
+            <span class="command">root@conradscott:~/home$</span>
+            <input type="text" id="user-input" class="input" autofocus />
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

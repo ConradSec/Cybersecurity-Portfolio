@@ -7,25 +7,12 @@
     <link rel="stylesheet" href="./../css/mobilestyle.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body onclick="document.getElementById('user-input').focus()">
     <div class="terminal">
         <div class="terminal-header">[Terminal] - Malicious DLL Injection Via Powershell</div>
         <div class="terminal-content">
             <pre>
-  _____  _      _                           
- |  __ \| |    | |                          
- | |  | | |    | |                          
- | |  | | |    | |                          
- | |__| | |____| |____                      
- |_____/|______|______|   _   _             
- |_   _|     (_)         | | (_)            
-   | |  _ __  _  ___  ___| |_ _  ___  _ __  
-   | | | '_ \| |/ _ \/ __| __| |/ _ \| '_ \ 
-  _| |_| | | | |  __/ (__| |_| | (_) | | | |
- |_____|_| |_| |\___|\___|\__|_|\___/|_| |_|
-            _/ |                            
-           |__/                             
-                
+              <img src="dllinjection.png" class="project4">   
 > I wrote a Batch script which would run Powershell
   commands, these commands would inject a DLL
   into memory. This would evade static detection
@@ -81,11 +68,14 @@
         
         
         <div class="input-line">
-            <span class="command">root@conradscott:~/projects/dll_injection$</span>
+          <pre class="root">root</pre><pre class="atsymbol">@</pre><pre class="ip">185.199.111.1</pre><pre class="inputcolon">:/</pre><pre class="dollar">dll_injection$</pre>
             <input type="text" id="user-input" class="input" autofocus />
         </div>
     </div>
 
     <script src="./../scripts/mobileprojectscript.js"></script>
+    <div class="scroll-indicator">
+      ↓ Scroll down ↓
+  </div>
 </body>
 </html>

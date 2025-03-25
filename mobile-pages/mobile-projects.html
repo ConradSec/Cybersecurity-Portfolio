@@ -7,42 +7,32 @@
     <link rel="stylesheet" href="./../css/mobilestyle.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body onclick="document.getElementById('user-input').focus()">
     <div class="terminal">
         <div class="terminal-header">[Terminal] - Projects</div>
         <div class="terminal-content">
             <pre>
-   _____           _           _       
-  |  __ \         (_)         | |      
-  | |__) | __ ___  _  ___  ___| |_ ___ 
-  |  ___/ '__/ _ \| |/ _ \/ __| __/ __|
-  | |   | | | (_) | |  __/ (__| |_\__ \
-  |_|   |_|  \___/| |\___|\___|\__|___/
-                 _/ |                  
-                |__/ 
-
-                
+            <img src="PROJECTS.png" class="projects">
 Type a number listed below and press Enter,<br>or type cd .. to return Home:
 
-
-[2.1] Pwnagotchi
-      - AI-powered WiFi attack tool  
-[2.2] Arduino BadUSB
-      - Emulating a malicious HID device  
-[2.3] Python C2 Server
-      - Remote Command & Control  
-[2.4] DLL Injection via PowerShell
-      - Bypassing Windows Defender 
-[2.5] Exploiting Wireless Chipset Vulnerability
-      - Remote Code Execution
-[2.6] Executable Obfuscation via Crypter
-      - Bypassing Windows Defender
+<a href="mobile-project1.html" style="color: #00FF00; text-decoration: none;">[2.1] Pwnagotchi
+      - AI-powered WiFi attack tool</a>
+<a href="mobile-project2.html" style="color: #00FF00; text-decoration: none;">[2.2] Arduino BadUSB
+      - Emulating a malicious HID device</a>
+<a href="mobile-project3.html" style="color: #00FF00; text-decoration: none;">[2.3] Python C2 Server
+      - Remote Command & Control</a>
+<a href="mobile-project4.html" style="color: #00FF00; text-decoration: none;">[2.4] DLL Injection via PowerShell
+      - Bypassing Windows Defender</a>
+<a href="mobile-project5.html" style="color: #00FF00; text-decoration: none;">[2.5] Exploiting Wireless Chipset Vulnerability
+      - Remote Code Execution</a>
+<a href="mobile-project6.html" style="color: #00FF00; text-decoration: none;">[2.6] Executable Obfuscation via Crypter
+      - Bypassing Windows Defender</a></pre>
 
             </pre>
         </div>
         
         <div class="input-line">
-            <span class="command">root@conradscott:~/projects$</span>
+            <pre class="root">root</pre><pre class="atsymbol">@</pre><pre class="ip">185.199.111.1</pre><pre class="inputcolon">:/</pre><pre class="dollar">projects$</pre>
             <input type="text" id="user-input" class="input" autofocus />
         </div>
     </div>

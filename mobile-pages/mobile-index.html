@@ -7,42 +7,34 @@
     <link rel="stylesheet" href="./../css/mobilestyle.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body onclick="document.getElementById('user-input').focus()">
     <div class="terminal">
         <div class="terminal-header">[Terminal] - Cybersecurity Portfolio</div>
         <div class="terminal-content">
-            <pre>
-  _____                          _ 
- / ____|                        | |
-| |     ___  _ __  _ __ __ _  __| |
-| |    / _ \| '_ \| '__/ _` |/ _` |
-| |___| (_) | | | | | | (_| | (_| |
- \_____\___/|_| |_|_| _\__,_|\__,_|
-   / ____|         | | | |           
-  | (___   ___ ___ | |_| |_          
-   \___ \ / __/ _ \| __| __|         
-   ____) | (_| (_) | |_| |_          
-  |_____/ \___\___/ \__|\__|         
-                                                  
-
-(Desktop display recommended)
-
+            <pre style="font-size: 20px;">
+<img src="mobileindexlogo.png" class="conradscott">
+Click an option below:
                 
-Welcome to my portfolio.
-Type a number listed below and press Enter:
-
-[1] About Me
-[2] Projects
-[3] Skills
-[4] Goals
-[5] Contact</pre></div>
+<a href="mobile-about.html" style="color: #00FF00; text-decoration: none; font-size: 20px;">[1] About Me</a>
+<a href="mobile-projects.html" style="color: #00FF00; text-decoration: none; font-size: 20px;">[2] Projects</a>
+<a href="mobile-skills.html" style="color: #00FF00; text-decoration: none; font-size: 20px;">[3] Skills</a>
+<a href="mobile-goals.html" style="color: #00FF00; text-decoration: none; font-size: 20px;">[4] Goals</a>
+<a href="mobile-contact.html" style="color: #00FF00; text-decoration: none; font-size: 20px;">[5] Contact</a></pre>
+            </div>
+            <pre style="font-size: 14px;" class="alternativelymobile">
+  Alternatively, type "cd "
+  followed by a number listed above
+            </pre>
 
         <div class="input-line">
-            <span class="command">root@conradscott:~/home$</span>
+            <pre class="root">root</pre><pre class="atsymbol">@</pre><pre class="ip">185.199.111.1</pre><pre class="inputcolon">:/</pre><pre class="dollar">$</pre>
             <input type="text" id="user-input" class="input" autofocus />
         </div>
     </div>
 
     <script src="./../scripts/mobilescript.js"></script>
+    <div class="scroll-indicator">
+        ↓ Scroll down ↓
+    </div>
 </body>
 </html>
